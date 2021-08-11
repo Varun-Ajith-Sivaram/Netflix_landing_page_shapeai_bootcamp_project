@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  transform: translate(0,17%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  z-index: 10;
+}
+
+.navbar_brand {
+  width: 100px;
+  height: 100%;
+}
+
+.brand_logo {
+  width: 100%;
+  height: 100%;
+}
+
+.lang_drop_down {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.lang_drop_down:focus {
+  outline: none;
+}
+
+.lang1,.lang2{
+  background-color: grey;
+}
+
+.drop_down_container {
+  border: 1px solid rgb(153,149,149);
+  padding: 0.2rem;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.4);
+  height: 80%;
+}
+
+.signin_button {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  height: 80%;
+}
+
+.navbar_nav_items {
+  display: flex;
+  gap: 10px;
+}
+
+.hero_bg_image_container{
+  width: 100%;
+  height: 80vh;
+}
+
+.bg_image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg_image_overlay{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0,0,0,0.4);
+  background-image: linear-gradient(to top,rgba(0,0,0,0.8)0,
+    rgba(0,0,0,0)60%,rgba(0,0,0,0.8)100%);
+}
+
+.hero_card{
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero_title{
+  font-weight: 600;
+  font-size: 1.70rem;
+}
+
+.hero_title_subtitle1, .hero_title_subtitle2{
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.hero_title_subtitle2{
+  margin: 0 45px;
+}
+
+.email_input{
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding-left: 7px;
+  font-size: 17px;
+}
+
+.email_label{
+  color: black;
+  position: absolute;
+  top: 28%;
+  left: 2%;
+  color: rgb(153,149,149);
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.form_button_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.form_container{
+  background-color: white;
+  width: 90%;
+  height: 50px;
+  position: relative;
+}
+
+.email_input:focus + .email_label{
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email_input:not(:placeholder-shown).email_input:not(:focus) + .email_label{
+  top: 0.2rem;
+  font-size: 10px; 
+}
+
+.email_input:focus-visible{
+  outline: none;
+}
+
+.get_started_button{
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 2px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.feature{
+  border-top: 8px solid #222;
+  padding: 2rem 1rem;
+}
+
+.feature_details{
+  text-align: center;
+}
+
+.feature_title{
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.feature_subtitle{
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.feature_image_container{
+  position: relative;
+  width: 100%;
+}
+
+.feature_image{
+  width: 100%;
+}
+
+.feature_video_container{
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 13%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  z-index: -2;
+}
+
+.feature_video{
+  width: 100%;
+}
+
+.feature2_poster_container{
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 16em;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  height: 60px;
+  padding: 0.25rem 0.6rem;
+  gap: 15px;
+}
+
+.poster_container{
+  width: 20%;
+  height: 100%;
+}
+
+.poster{
+  width: 100%;
+  height: 100%;
+}
+
+.poster_details{
+  width: 60%;
+}
+
+.poster_details > h4{
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.poster_details > h6{
+  font-size: 12px;
+  font-weight: 400;
+  color: #0071EB;
+}
+
+
+.download_gif_container{
+  width: 20%;
+  height: 100%;
+}
+
+.gif{
+  width: 100%;
+  height: 100%;
+}
+
+.feature3_video_container{
+  max-width: 63%;
+  max-height: 47%;
+  z-index: -2;
+  top: 10.5%;
+  left: 19%;
+}
+
+.faq_accordion{
+  width: 100%;
+}
+
+.faq_title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 18px;
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: white;
+}
+
+.faq_visible{
+  background-color: #303030;
+  border-top: 1px solid black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq_visible > p{
+  margin: 1rem;
+}
+
+.faq_list_container{
+  border-top: 8px solid #222;
+  padding: 2rem 0;
+}
+
+.faq_heading{
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem 3rem;
+}
+
+.faq_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq_text{
+    padding: 0 2rem 0.8rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+.footer_border{
+    padding: 1.5rem 0;
+    border-bottom: 8px solid #303030;
+}
+
+footer{
+    font-weight: 500;
+    padding: 3rem 1rem 2rem;
+    color: #757575;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_row2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+   
+}
+
+.row2_column_1,.row2_column_2,.row2_column_3,.row2_column_4{
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    padding: 2% 2%;
+    
+}
+
+.footer_row1 > h4{
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 4%;
+}
+
+.footer_row3 > .drop_down_container{
+    width: fit-content;
+    margin-left: 5%;
+    border-color: #303030;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.footer_row4{
+    padding-left: 5%;
+    font-size: 13px;
+}
+
+a{
+  color: #757575;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+@media(min-width:  768px){
+  .hero_bg_image_container{
+  height: 100vh;
+  }
+
+  .bg_image_overlay{
+    height: 100vh;
+  }
+
+  .hero_card{
+    top: 38%;
+    left: 30%;
+    transform: translate(-20%,-20%);
+  }
+
+  .hero_title{
+    font-size: 3rem;
+  }
+
+  .hero_title_subtitle1,.hero_title_subtitle2{
+    font-size: 1.3rem;
+  }
+
+  .email_label{
+      font-size: 16px;
+  }
+  
+  .feature{
+    padding: 4rem;
+  }
+
+  .feature_title{
+    font-size: 35px;
+  }
+
+  .feature_subtitle{
+    font-size: 20px;
+  }
+
+  .feature_video_container{
+    top: 20.3%;
+    left: 13.1%;
+  }
+
+  .feature2_poster_container{
+    max-width: 25em;
+    height: 85px;
+  }
+
+  .poster_container{
+    width: 13%;
+  }
+
+  .download_gif_container{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .poster_details > h4{
+    font-size: 19px;
+  }
+
+  .poster_details >h6{
+    font-size: 14px;
+  }
+
+  .feature3_video_container{
+    top: 10.5%;
+    left: 17%;
+  }
+
+  .faq_title{
+    font-size: 20px;
+  }
+
+  .faq_list{
+    padding: 1rem 5rem;
+  }
+
+  .faq_heading{
+    font-size: 37px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .faq_bottom_text_email_container{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateX(16.5%);
+  }
+
+  .footer_border{
+      padding: 2.5rem 0;
+  }
+
+  footer{
+    padding: 4rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_row1 > h4{
+    font-size: 17px;
+    letter-spacing: -1px;
+    padding-left: 6.5%;
+  }
+
+  .footer_row2{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0 4.7%;
+  }
+
+  .footer_row2 > .row2_column_1,.row2_column_2,.row2_column_3,.row2_column_4{
+    font-size: 14px;
+    gap: 14px;
+  }
+  
+  .footer_row3 > .drop_down_container{
+    margin-left: 6.5%;
+  }
+
+  .footer_row4{
+    padding-top: 0.6%;
+    padding-left: 7%;
+    font-size: 14px;
+  }
+
+}
+
+@media(min-width: 1024px){
+  .navbar{
+    padding:  2% 5%;
+  }
+
+  .navbar_brand{
+    width: 150px;
+  }
+
+  .signin_button{
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .drop_down_container{
+    padding: 10px 5px;
+  }
+
+  .navbar_nav_items{
+    gap: 30px;
+  }
+
+  .hero_card{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .form_container{
+    width: 50%;
+  }
+
+  .form_button_container{
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .email_input:focus + .email_label{
+    top: 0.2rem;
+    font-size: 12px;
+  }
+  
+  .email_input:not(:placeholder-shown).email_input:not(:focus) + .email_label{
+    top: 0.2rem;
+    font-size: 12px; 
+  }
+
+  .get_started_button{
+    height: 50px;
+  }
+
+
+  .feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .feature_details{
+    text-align: left;
+    padding: 0 6rem ;
+  }
+
+  .feature_title{
+    font-size: 48px;
+  }
+
+  .feature_subtitle{
+    font-size: 25px;
+  }
+
+  .feature_image_container{
+    max-width: 500px;
+  }
+
+  .feature:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  .feature2_poster_container{
+    max-width: 20em;
+    height: 95px;
+    padding: 1rem;
+  }
+
+  .poster_container{
+    width: 20%;
+  }
+
+  .faq_list{
+    padding: 1rem 25rem; 
+  }
+  
+  .faq_text{
+    font-size: 1.1rem;
+    left: 11%;
+  }
+
+  .faq_bottom_text_email_container{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(41%);
+}
+    
+    .faq_text{
+        font-size: 1.2rem;
+        letter-spacing: -1.25px;
+    }
+  
+    .footer_border{
+      padding-top: 2rem;
+    }
+
+    footer{
+      padding-bottom: 2rem;
+    }
+
+    .footer_row1 > h4{
+      padding-top: 1.3rem;
+      padding-left: 20%;
+      font-size: 16px;
+    }
+
+    .footer_row2{
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      padding: 0 18.9%;
+    }
+  
+    .footer_row2 > .row2_column_1,.row2_column_2,.row2_column_3,.row2_column_4{
+      font-size: 12px;
+      gap: 14px;
+    }
+
+    .footer_row3 > .drop_down_container{
+      margin-left: 20%;
+    }
+  
+    .footer_row4{
+      padding-top: 0.6%;
+      padding-left: 20%;
+      font-size: 12px;
+      letter-spacing: 0.1px;
+    }
+
+}
